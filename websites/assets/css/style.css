@@ -111,15 +111,15 @@ border-radius: 50px !important;
 }
 
 .fixed-logo {
-    height: 30px;        /* Set the ideal height for your logo */
-    width: auto;         /* Maintains the original aspect ratio */
+    height: 30px;        
+    width: auto;         
     display: block;
-    transition: transform 0.3s ease; /* Adds a smooth feel for interactions */
+    transition: transform 0.3s ease; 
 }
 
 /* Optional: Slight hover effect */
 .fixed-logo:hover {
-    transform: scale(1.02); /* Very subtle growth on hover */
+    transform: scale(1.02);
 }
 
 /* --- MOBILE RESPONSIVE (Strict Control) --- */ 
