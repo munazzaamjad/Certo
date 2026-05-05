@@ -290,8 +290,8 @@ margin-bottom: 60px; /* Image 10 aur 11 ke darmiyan gap */
 width: 100%; 
 } 
 .img-10-full { 
-max-width: 650px; 
-width: 35%; 
+max-width: 950px; 
+width: 60%; 
 height: auto; 
 display: inline-block; 
 } 
@@ -300,8 +300,8 @@ display: inline-block;
 width: 100%; 
 } 
 .img-11-full { 
-max-width: 1000px; /* Card size lock */ 
-width: 35%; 
+max-width: 1500px; /* Card size lock */ 
+width: 60%; 
 height: auto; 
 display: inline-block; 
 /* Card ko clean rakhne ke liye */ 
@@ -337,8 +337,8 @@ margin-bottom: 30px;
 }
 
 .info-img {
-    width: 50%;
-    max-width: 500px; /* Adjusting size to match design proportions */
+    width: 70%;
+    max-width: 700px; /* Adjusting size to match design proportions */
     height: auto;
     object-fit: contain;
     /* Adding subtle shadow if the image doesn't already have one */
