@@ -52,10 +52,10 @@ position: absolute;
 top: 50%; 
 
 left: 0; 
-transform: translate(-40%, -50%); 
+transform: translate(-30%, -50%); 
 width: 35%; /* Box size fixed */ 
-max-width: 300px; 
-z-index: 20; 
+max-width: 320px; 
+z-index: 5; 
 pointer-events: none; 
 margin-left: 20%; 
 } 
