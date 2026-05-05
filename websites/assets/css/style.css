@@ -304,7 +304,7 @@ max-width: 1500px;
 width: 60%; 
 height: auto; 
 display: inline-block; 
-/* Card ko clean rakhne ke liye */ 
+
 filter: drop-shadow(0 15px 40px rgba(0,0,0,0.04)); 
 } 
 /* Mobile Responsive */ 
