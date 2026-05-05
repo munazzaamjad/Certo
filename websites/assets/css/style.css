@@ -43,6 +43,7 @@ padding-left: 25px;
 .hero-bg-image { 
 width: 110%; 
 height: 110%; 
+transform: scale(1.2);
 object-fit: cover; 
 display: block; 
 } 
