@@ -1,0 +1,631 @@
+:root { 
+--certo-blue: #4335DE; 
+--certo-dark-blue: #02033b; 
+--certo-yellow: #FFC043; 
+} 
+html, body {     /* Base Settings to prevent shifting */ 
+overflow-x: hidden; 
+width: 100%; 
+margin: 0; 
+padding: 0; 
+} 
+/* --- HERO SECTION --- */ 
+.hero-section { 
+min-height: 100vh; 
+display: flex; 
+align-items: center; 
+overflow: hidden; /* Bahar nikalti hui images ko lock karne ke liye */ 
+background: #fff; 
+width: 100%;
+} 
+/* Left Content Area */ 
+.hero-content { 
+padding: 0 10% 0 15%; /* Spacing ko lock kar diya */ 
+position: relative; 
+z-index: 5; 
+} 
+.hero-content h1 { 
+font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive but controlled size */ 
+color: var(--certo-dark-blue); 
+line-height: 1.1; 
+font-weight: 800; 
+} 
+/* --- RIGHT SIDE: THE BLUE & ORANGE FRAME --- */ 
+.blue-frame { 
+position: relative; 
+width: 100%; 
+height: 100vh; 
+background-color: var(--certo-blue); 
+/* Blue border effect using padding */ 
+padding-top: 25px; 
+padding-left: 25px; 
+} 
+.hero-bg-image { 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+display: block; 
+} 
+/* --- THE MOBILE PHONE (The moving part) --- */ 
+.mobile-container { 
+position: absolute; 
+top: 50%; 
+/* Isay percentage mein lock kiya hai taake ye white aur orange ke junction par rahe */ 
+left: 0; 
+transform: translate(-40%, -50%); 
+width: 35%; /* Box size fixed */ 
+max-width: 300px; 
+z-index: 20; 
+pointer-events: none; /* Mouse moves se disturb nahi hoga */ 
+margin-left: 20%; 
+} 
+.floating-mobile { 
+width: 100%; 
+height: auto; 
+display: block; 
+filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3)); 
+} 
+/* --- BUTTONS (Fixed Sizes) --- */ 
+.btn-certo-yellow { 
+background-color: var(--certo-yellow) !important; 
+color: var(--certo-dark-blue) !important; 
+padding: 12px 30px !important; 
+border-radius: 50px !important; 
+} 
+.btn-certo-outline { 
+background: transparent !important; 
+border: 2px solid var(--certo-dark-blue) !important; 
+color: var(--certo-dark-blue) !important; 
+padding: 12px 30px !important; 
+border-radius: 50px !important; 
+} 
+/* --- NAVBAR SIGN IN BUTTON --- */
+
+/* Ensures the container moves to the right in Bootstrap navbar */
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+}
+
+/* Specific styling for the button image */
+.fixed-btn-img {
+    height: 35px;            /* Set the fixed height */
+    width: auto;             /* Keeps the image aspect ratio perfect */
+    cursor: pointer;         /* Shows hand icon on hover */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition for hover effect */
+    display: block;
+}
+
+/* Hover effect to make it interactive */
+.fixed-btn-img:hover {
+    transform: scale(1.05);  /* Slightly grows when hovered */
+    opacity: 0.9;            /* Slightly fades for a button-click feel */
+}
+
+/* --- NAVBAR LOGO STYLING --- */
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Vertically centers the logo in the navbar */
+    padding: 0;          /* Removes default Bootstrap padding for a cleaner look */
+}
+
+.fixed-logo {
+    height: 30px;        /* Set the ideal height for your logo */
+    width: auto;         /* Maintains the original aspect ratio */
+    display: block;
+    transition: transform 0.3s ease; /* Adds a smooth feel for interactions */
+}
+
+/* Optional: Slight hover effect */
+.fixed-logo:hover {
+    transform: scale(1.02); /* Very subtle growth on hover */
+}
+
+/* --- MOBILE RESPONSIVE (Strict Control) --- */ 
+@media (max-width: 991px) { 
+.hero-section { 
+flex-direction: column; 
+} 
+
+.hero-content { 
+padding: 50px 20px; 
+text-align: center; 
+} 
+.blue-frame { 
+height: 450px; 
+padding-left: 0; /* Mobile par blue border side se khatam */ 
+} 
+.fixed-btn-img {
+        height: 40px;        /* Smaller size for mobile screens */
+        margin-top: 15px;    /* Adds space from menu links on mobile */
+    }
+     .justify-content-end {
+        justify-content: center !important; /* Centers button on mobile menu */
+    }
+.mobile-container { 
+left: 50%; 
+transform: translate(-50%, -50%); 
+width: 220px; 
+} 
+ .fixed-logo {
+        height: 35px;    /* Slightly smaller logo for mobile screens */
+    }
+} 
+                             
+                            
+                       /*Section 2*/ 
+.section-yellow { 
+background-color: #FFC043; /* Brand yellow background */ 
+padding: 60px 0; 
+width: 100%; 
+overflow: hidden; /* Prevents content from overflowing outside */ 
+} 
+.sec2-container { 
+max-width: 1200px; 
+margin: 0 auto; 
+padding: 0 20px; 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+} 
+/* Heading Image */ 
+.sec2-heading { 
+margin-bottom: 40px; 
+width: 100%; 
+text-align: left; /* Keeps heading aligned to the left */ 
+} 
+.sec2-heading img { 
+max-width: 500px; 
+width: 100%; 
+height: auto; 
+} 
+/* Cards Image */ 
+.sec2-cards-slider { 
+width: 100%; 
+margin-bottom: 50px; 
+display: flex; 
+justify-content: center; 
+} 
+.full-cards-img { 
+width: 127%; /* Slightly larger to fully cover the design */ 
+max-width: none; /* Remove width constraints */ 
+height: auto; 
+} 
+/* Logos Section Fix */ 
+.sec2-logos { 
+width: 100%; 
+display: flex; 
+justify-content: center; 
+} 
+.clean-logos { 
+width: 100%; 
+max-width: 1100px; 
+height: auto; 
+/* Ensures logos stay properly contained without extra spacing */ 
+object-fit: contain; 
+display: block; 
+} 
+/* Mobile Responsive */ 
+@media (max-width: 768px) { 
+.full-cards-img { 
+width: 200%; /* Makes cards feel scrollable on mobile */ 
+} 
+} 
+                            
+                               
+                         /* Section 3*/ 
+.mission-section { 
+padding: 100px 0; 
+background-color: #ffffff; 
+overflow: hidden; 
+width: 1500px; ; 
+} 
+/* Left Content */ 
+.mission-text-wrapper { 
+padding-right: 20px; 
+} 
+.mission-img-text { 
+width: 80%; 
+max-width: 550px; 
+height: auto; 
+display: block; 
+} 
+/* Right Content: Visual with Frame */ 
+.mission-visual { 
+position: relative; 
+padding: 30px; /* Space for the yellow frame to show */ 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+} 
+.mission-person-img { 
+position: relative; 
+z-index: 2; 
+width: 70%; 
+max-width: 500px; 
+height: auto; 
+border-radius: 5px; 
+transform: translate(-20px, -20px); 
+} 
+/* Responsive adjustments */ 
+@media (max-width: 991px) { 
+.mission-section { 
+padding: 60px 0; 
+text-align: center; 
+} 
+.mission-visual { 
+margin-top: 50px; 
+} 
+.mission-img-text { 
+margin: 0 auto; 
+} 
+.mission-person-img { 
+transform: translate(0, 0); 
+} 
+.yellow-boundary { 
+display: none; 
+} 
+} 
+
+                         
+                          /*Sectio 4*/ 
+/* --- SECTION 4: LIGHT BLUE/WHITE STYLE --- */ 
+.spyware-full-blue { 
+background-color: #f3f7ff; /* Poora background light blue */ 
+padding: 100px 0; 
+width: 100%; 
+display: flex; 
+justify-content: center; 
+} 
+.spyware-full-blue .container { 
+display: flex; 
+flex-direction: column; 
+align-items: center; /* Horizontally Center */ 
+text-align: center; 
+} 
+/* Heading Image (image10) */ 
+.spy-header-row { 
+margin-bottom: 60px; /* Image 10 aur 11 ke darmiyan gap */ 
+width: 100%; 
+} 
+.img-10-full { 
+max-width: 650px; 
+width: 35%; 
+height: auto; 
+display: inline-block; 
+} 
+/* Features Grid (image11) */ 
+.spy-card-row { 
+width: 100%; 
+} 
+.img-11-full { 
+max-width: 1000px; /* Card size lock */ 
+width: 35%; 
+height: auto; 
+display: inline-block; 
+/* Card ko clean rakhne ke liye */ 
+filter: drop-shadow(0 15px 40px rgba(0,0,0,0.04)); 
+} 
+/* Mobile Responsive */ 
+@media (max-width: 768px) { 
+.spyware-full-blue { 
+padding: 60px 15px; 
+} 
+.img-10-full { 
+width: 85%; 
+} 
+.spy-header-row { 
+margin-bottom: 30px; 
+} 
+}
+
+
+                            /*Section 5*/
+/* --- SECTION 5: INFO CARDS --- */
+.info-cards-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* White background as per design */
+    width: 100%;
+}
+
+.info-card {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-img {
+    width: 50%;
+    max-width: 500px; /* Adjusting size to match design proportions */
+    height: auto;
+    object-fit: contain;
+    /* Adding subtle shadow if the image doesn't already have one */
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.03));
+}
+
+/* --- RESPONSIVE FIX --- */
+@media (max-width: 767px) {
+    .info-cards-section {
+        padding: 40px 15px;
+    }
+    
+    .info-img {
+        max-width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+}
+    
+               /*Section 6*/
+/* --- SECTION 6: BLUE GRADIENT BANNER --- */
+.cta-gradient-section {
+    /* Linear gradient background as per image_65a580.png */
+    background: linear-gradient(135deg, #4b5df7 0%, #2b38b1 100%);
+    padding: 80px 0;
+    width: 100%;
+    color: white;
+}
+
+/* Image 14 (Text) Styling */
+.cta-text-wrapper {
+    margin-bottom: 40px;
+}
+
+.img-14-cta {
+    max-width: 600px; /* Adjust based on design scale */
+    width: 100%;
+    height: auto;
+}
+
+/* Buttons Alignment */
+.cta-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the two buttons */
+    flex-wrap: wrap; /* Wraps buttons on mobile */
+}
+
+/* Image 15 (iPhone Button) Styling */
+.img-15-btn {
+    height: 55px; /* Size to match the Android button height */
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.img-15-btn:hover {
+    transform: translateY(-3px); /* Hover lift effect */
+}
+
+/* Manual Android Button Styling to match Image 15 */
+.android-outline-btn {
+    height: 55px;
+    padding: 0 30px;
+    border: 2px solid white;
+    border-radius: 50px; /* Rounded pill shape */
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.android-outline-btn:hover {
+    background-color: white;
+    color: #4b5df7;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .cta-gradient-section {
+        padding: 60px 20px;
+    }
+    
+    .cta-buttons-wrapper {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 15px;
+    }
+}
+
+                    /*Section 7*/
+/* --- SECTION 7: STACKED CENTERED LAYOUT (ENHANCED SIZES) --- */
+.footer-stacked-center {
+    background-color: #ffffff; 
+    padding: 100px 0; /* Vertical padding thora barha diya hai */
+    width: 100%;
+}
+
+/* Image 20: Top Logo (Large Size) */
+.img-20-top {
+    max-width: 500px; /* Size barha diya gaya hai */
+    width: 150%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Middle Row: 16, 17, 18 (Large Icons) */
+.middle-badges-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Icons ke darmiyan space barha di hai */
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.badge-mid {
+    height: 400px; /* Size 25px se barha kar 60px kar diya hai */
+    width: auto;
+    object-fit: contain;
+   
+}
+
+/* Image 19: Bottom Badge (Large) */
+.img-19-bottom {
+    height: 50px; /* Image 19 ko sabse wazeh rakha hai */
+    width: auto;
+    display: inline-block;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .footer-stacked-center {
+        padding: 60px 20px;
+    }
+    
+    .img-20-top {
+        max-width: 300px;
+    }
+    
+    .badge-mid {
+        height: 40px; /* Mobile par thora chota rakha hai */
+    }
+    
+    .img-19-bottom {
+        height: 50px;
+    }
+    
+    .middle-badges-row {
+        gap: 25px;
+    }
+}
+
+/* --- FEATURED LOGOS SECTION --- */
+/* --- FOOTER MAIN CONTAINER --- */
+/* --- UPDATED CSS ONLY --- */
+.custom-footer {
+    background-color: #02033b;
+    padding: 60px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px; /* Is se spacing tight ho jayegi */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Row alignment */
+.footer-row-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Sab ko center align rakha hai row mein */
+    margin-bottom: 40px;
+}
+
+.logo-col {
+    display: flex;
+    align-items: center;
+}
+
+/* Google + Future 50 Stack */
+.stack {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 15px;
+}
+
+.white-logo {
+    filter: brightness(0) invert(1);
+    height: 30px;
+}
+
+.img-google { height: 120px;width: 100%; margin-left: -30%; } /* Google thoda bada hota hai */
+.img-intel { 
+    height: 200px; /* 200px bahut zyada bada tha */
+    width: 120%; 
+    margin-left: 40%;
+    
+    /* Yeh filter white logo ko yellow mein convert kar dega */
+    filter: brightness(0) saturate(100%) invert(89%) sepia(20%) saturate(1200%) hue-rotate(350deg) brightness(105%) contrast(100%);
+}
+
+.future50-box {
+    height: 55px; /* White box size */
+    width: auto;
+  padding-left: 70%;
+    margin-bottom: -50%;
+    
+}
+
+/* Yellow Box Styling */
+.yellow-rect {
+    background-color: #ecb322;
+    height: 140px;width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 40%;
+    margin-top: -40px;
+}
+
+.certo-main {
+    width: 70%; 
+    height: auto;
+    display: block;
+}
+
+/* Image 25: Plus Logo (Jo Certo ke upar aayega) */
+.certo-plus {
+    position: absolute; /* Parent (.yellow-rect) ke upar fix karne ke liye */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Yeh line perfectly center karti hai */
+    width: 80%; /* Size ko adjust karein jaisa image mein chahiye */
+    pointer-events: none; /* Taake niche wali image click ho sake agar zaroorat ho */
+}
+
+/* Text Styling */
+.footer-bottom {
+    margin-top: 50px;
+    text-align: left; /* Text ko left-aligned rakhne ke liye */
+}
+
+.legal-text {
+    font-size: 11px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.4);
+    max-width: 850px; /* Is se text automatic lines mein break ho jayega */
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+
+     
+}
+.legal-text{
+     margin-left: -9%;
+    display: flex;
+    flex-direction: column; /* Is se items ek ke neeche ek (next line) aa jayenge */
+    gap: 8px;               /* Dono lines ke darmiyan thoda gap dene ke liye */
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: left;
+
+    
+}
+.copyright-row {
+    margin-left: -30%;
+    display: flex;
+    flex-direction: column; /* Is se items ek ke neeche ek (next line) aa jayenge */
+    gap: 8px;               /* Dono lines ke darmiyan thoda gap dene ke liye */
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: left;       /* Text ko left side par align rakhne ke liye */
+}
+
+.copyright-row a {
+    color: white;
+    text-decoration: underline;
+}
+
+.copyright-row a { color: white; text-decoration: underline; }
