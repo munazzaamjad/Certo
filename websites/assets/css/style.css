@@ -89,25 +89,25 @@ border-radius: 50px !important;
 
 /* Specific styling for the button image */
 .fixed-btn-img {
-    height: 35px;            /* Set the fixed height */
-    width: auto;             /* Keeps the image aspect ratio perfect */
-    cursor: pointer;         /* Shows hand icon on hover */
+    height: 35px;            
+    width: auto;            
+    cursor: pointer;         
     transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition for hover effect */
     display: block;
 }
 
 /* Hover effect to make it interactive */
 .fixed-btn-img:hover {
-    transform: scale(1.05);  /* Slightly grows when hovered */
-    opacity: 0.9;            /* Slightly fades for a button-click feel */
+    transform: scale(1.05);  
+    opacity: 0.9;           
 }
 
 /* --- NAVBAR LOGO STYLING --- */
 
 .navbar-brand {
     display: flex;
-    align-items: center; /* Vertically centers the logo in the navbar */
-    padding: 0;          /* Removes default Bootstrap padding for a cleaner look */
+    align-items: center; 
+    padding: 0;          
 }
 
 .fixed-logo {
