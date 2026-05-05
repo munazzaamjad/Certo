@@ -81,7 +81,7 @@ border-radius: 50px !important;
 } 
 /* --- NAVBAR SIGN IN BUTTON --- */
 
-/* Ensures the container moves to the right in Bootstrap navbar */
+
 .navbar-collapse {
     display: flex;
     align-items: center;
