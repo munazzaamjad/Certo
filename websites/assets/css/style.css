@@ -304,8 +304,8 @@ display: inline-block;
 width: 100%; 
 } 
 .img-11-full { 
-max-width: 1500px; /* Card size lock */ 
-width: 60%; 
+max-width: 1700px; /* Card size lock */ 
+width: 80%; 
 height: auto; 
 display: inline-block; 
 /* Card ko clean rakhne ke liye */ 
