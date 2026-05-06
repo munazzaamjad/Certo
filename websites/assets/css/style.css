@@ -1,4 +1,4 @@
-:root { 
+  :root { 
 --certo-blue: #4335DE; 
 --certo-dark-blue: #02033b; 
 --certo-yellow: #FFC043; 
@@ -245,7 +245,7 @@ width: 110% !important; /* Container ki poori width le legi */
     height: auto;
     max-width: 700px; /* Is value ko barha kar aap mazeed bada kar sakte hain */
     display: block;
-    border-radius: 20px;
+   
 } 
 /* Responsive adjustments */ 
 @media (max-width: 991px) { 
@@ -336,8 +336,8 @@ margin-bottom: 30px;
 }
 
 .info-img {
-    width: 70%;
-    max-width: 700px; /* Adjusting size to match design proportions */
+    width: 120%;
+    max-width: 1100px; /* Adjusting size to match design proportions */
     height: auto;
     object-fit: contain;
     /* Adding subtle shadow if the image doesn't already have one */
@@ -464,14 +464,20 @@ margin-bottom: 30px;
 
 /* Image 19: Bottom Badge (Large) */
 .img-19-bottom {
-    height: 50px; /* Image 19 ko sabse wazeh rakha hai */
+    .img-19-bottom {
+    height: 50px;
     width: auto;
-    display: inline-block;
+    
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+};   /* 🔥 This centers the image */
 }
 
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     .footer-stacked-center {
+         text-align: center;
         padding: 60px 20px;
     }
     
@@ -507,6 +513,29 @@ margin-bottom: 30px;
     margin: 0 auto;
     padding: 0 20px;
 }
+.newsletter-img22-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-img22-box img {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+
+    /* white logo effect */
+    filter: brightness(0) invert(1);
+}
+
+/* Footer version */
+.future50-box {
+    height: 50px;
+    width: auto;
+
+    /* white color for dark bg */
+    filter: brightness(0) invert(1);
+}
 
 /* Row alignment */
 .footer-row-wrapper {
@@ -537,16 +566,16 @@ margin-bottom: 30px;
 .img-intel { 
     height: 200px; /* 200px bahut zyada bada tha */
     width: 120%; 
-    margin-left: 40%;
+    margin-left: -50%;
     
     /* Yeh filter white logo ko yellow mein convert kar dega */
     filter: brightness(0) saturate(100%) invert(89%) sepia(20%) saturate(1200%) hue-rotate(350deg) brightness(105%) contrast(100%);
 }
 
 .future50-box {
-    height: 55px; /* White box size */
-    width: auto;
-  padding-left: 70%;
+    height: 70px; /* White box size */
+    width: 70%;
+  margin-left: 40%;
     margin-bottom: -50%;
     
 }
@@ -554,30 +583,43 @@ margin-bottom: 30px;
 /* Yellow Box Styling */
 .yellow-rect {
     background-color: #ecb322;
-    height: 140px;width: 70%;
+    width: 300px;
+    height: 150px;
+
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    margin-left: 40%;
-    margin-top: -40px;
+
+    border-radius: 16px;
+    margin-left: 10%;
 }
 
 .certo-main {
-    width: 70%; 
+    width: 30%;
     height: auto;
     display: block;
+
+    position: relative;
+    z-index: 1;
 }
+
+
 
 /* Image 25: Plus Logo (Jo Certo ke upar aayega) */
 .certo-plus {
-    position: absolute; /* Parent (.yellow-rect) ke upar fix karne ke liye */
+    position: absolute;
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Yeh line perfectly center karti hai */
-    width: 80%; /* Size ko adjust karein jaisa image mein chahiye */
-    pointer-events: none; /* Taake niche wali image click ho sake agar zaroorat ho */
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    z-index: 2;
+
+    pointer-events: none;
+    margin-left: 2%;
 }
 
 /* Text Styling */
@@ -587,6 +629,8 @@ margin-bottom: 30px;
 }
 
 .legal-text {
+      margin-left: 0;
+    text-align: center;
     font-size: 11px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.4);
@@ -626,5 +670,3 @@ margin-bottom: 30px;
     color: white;
     text-decoration: underline;
 }
-
-.copyright-row a { color: white; text-decoration: underline; }
