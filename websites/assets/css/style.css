@@ -31,15 +31,17 @@ line-height: 1.1;
 font-weight: 800; 
 } 
 /* --- RIGHT SIDE: THE BLUE & ORANGE FRAME --- */ 
-.blue-frame { 
-position: relative; 
-width: 100%; 
-height: 100vh; 
-background-color: var(--certo-blue); 
-/* Blue border effect using padding */ 
-padding-top: 25px; 
-padding-left: 25px; 
-} 
+.blue-frame {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Is height ko aap kam ya zyada kar sakti hain */
+    background-color: #4335DE; /* Blue color */
+    
+    /* YE HAI ASLI FIX: */
+    padding-top: 40px;   /* Is se upar wala blue border nazar ayega */
+    padding-left: 40px;  /* Is se left wala blue border nazar ayega */
+    border-radius: 0 0 0 40px; /* Design wala curve */
+}
 .hero-bg-image { 
 width: 100%; 
 height: 100%; 
