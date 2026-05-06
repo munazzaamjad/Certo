@@ -9,8 +9,15 @@ width: 100%;
 margin: 0; 
 padding: 0; 
 } 
+.cta-blue-box {
+    background-color: #2b38b1;
+    padding: 40px;
+    border-radius: 20px;
+    display: inline-block;
+}
 /* --- HERO SECTION --- */ 
 .hero-section { 
+    margin-top: 40px;
 min-height: 100vh; 
 display: flex; 
 align-items: center; 
@@ -40,25 +47,29 @@ background-color: var(--certo-blue);
 padding-top: 25px; 
 padding-left: 25px; 
 } 
-.hero-bg-image { 
-width: 100%; 
-height: 100%; 
-object-fit: cover; 
-display: block; 
-} 
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* 👇 move image to RIGHT */
+    object-position: 70% center;
+}
 /* --- THE MOBILE PHONE (The moving part) --- */ 
 .mobile-container { 
-position: absolute; 
-top: 50%; 
-/* Isay percentage mein lock kiya hai taake ye white aur orange ke junction par rahe */ 
-left: 0; 
-transform: translate(-40%, -50%); 
-width: 35%; /* Box size fixed */ 
-max-width: 300px; 
-z-index: 20; 
-pointer-events: none; /* Mouse moves se disturb nahi hoga */ 
-margin-left: 20%; 
-} 
+    position: absolute;
+     top: 48% !important;      /* moves UP */
+    left: 11% !important;     /* moves LEFT slightly */
+    transform: translate(-50%, -50%) !important; 
+         /* was 50% → moves UP */
+ 
+    /* more left + slightly more up */
+    width: 35%; 
+    max-width: 300px; 
+    z-index: 20; 
+    pointer-events: none; 
+    margin-left: 18%;  /* was 20% → moves LEFT */
+}
 .floating-mobile { 
 width: 100%; 
 height: auto; 
@@ -86,7 +97,28 @@ border-radius: 50px !important;
     display: flex;
     align-items: center;
 }
+/* --- FIXED LOGO STYLING --- */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 0; /* Prevents Bootstrap default margin from pushing it */
+}
 
+.fixed-logo {
+    height: 30px;
+    width: auto;
+    display: block;
+    /* REMOVE transform: translateX(-120px); <--- This was the culprit */
+    transition: transform 0.3s ease;
+}
+
+/* Ensure the container doesn't squeeze the logo */
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Keeps logo left, button right */
+    align-items: center;
+}
 /* Specific styling for the button image */
 .fixed-btn-img {
     height: 35px;            /* Set the fixed height */
@@ -221,6 +253,15 @@ background-color: #ffffff;
 overflow: hidden; 
 width: 1500px; ; 
 } 
+.mission-section .row {
+    display: flex;
+    align-items: center;
+}
+
+.mission-section .col-lg-6:first-child {
+    display: flex;
+    justify-content: flex-start;
+}
 /* Left Content */ 
 .mission-text-wrapper { 
 padding-right: 20px; 
@@ -271,13 +312,13 @@ display: none;
                          
                           /*Sectio 4*/ 
 /* --- SECTION 4: LIGHT BLUE/WHITE STYLE --- */ 
-.spyware-full-blue { 
-background-color: #f3f7ff; /* Poora background light blue */ 
-padding: 100px 0; 
-width: 100%; 
-display: flex; 
-justify-content: center; 
-} 
+.spyware-full-blue {
+     background-color: #d0cfcf;/* changed to white */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .spyware-full-blue .container { 
 display: flex; 
 flex-direction: column; 
@@ -299,14 +340,13 @@ display: inline-block;
 .spy-card-row { 
 width: 100%; 
 } 
-.img-11-full { 
-max-width: 1500px; /* Card size lock */ 
-width: 60%; 
-height: auto; 
-display: inline-block; 
-/* Card ko clean rakhne ke liye */ 
-filter: drop-shadow(0 15px 40px rgba(0,0,0,0.04)); 
-} 
+.img-11-full {
+    max-width: 700px;   /* adjust size here */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;     /* keeps it centered */
+}
 /* Mobile Responsive */ 
 @media (max-width: 768px) { 
 .spyware-full-blue { 
@@ -360,8 +400,7 @@ margin-bottom: 30px;
                /*Section 6*/
 /* --- SECTION 6: BLUE GRADIENT BANNER --- */
 .cta-gradient-section {
-    /* Linear gradient background as per image_65a580.png */
-    background: linear-gradient(135deg, #4b5df7 0%, #2b38b1 100%);
+    background: linear-gradient(135deg, #2b38b1 0%, #1e2a8a 100%);
     padding: 80px 0;
     width: 100%;
     color: white;
@@ -493,139 +532,159 @@ margin-bottom: 30px;
     }
 }
 
-/* --- FEATURED LOGOS SECTION --- */
-/* --- FOOTER MAIN CONTAINER --- */
-/* --- UPDATED CSS ONLY --- */
-.custom-footer {
-    background-color: #02033b;
-    padding: 60px 0;
-    color: white;
-    font-family: Arial, sans-serif;
+/* --- MAIN FOOTER STYLING --- */
+.main-footer {
+    background-color: #02033b; /* Deep dark blue */
+    color: #ffffff;
+    padding: 80px 0 40px 0;
 }
 
-.container {
-    max-width: 900px; /* Is se spacing tight ho jayegi */
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Row alignment */
-.footer-row-wrapper {
+.footer-top-row {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Sab ko center align rakha hai row mein */
-    margin-bottom: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.logo-col {
-    display: flex;
-    align-items: center;
+.footer-col {
+    flex: 1;
+    min-width: 300px;
 }
 
-/* Google + Future 50 Stack */
-.stack {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 15px;
+/* Left Column */
+.footer-wordmark {
+    width: 250px;
+    margin-bottom: 30px;
 }
 
-.white-logo {
-    filter: brightness(0) invert(1);
-    height: 30px;
-}
-
-.img-google { height: 120px;width: 100%; margin-left: -30%; } /* Google thoda bada hota hai */
-.img-intel { 
-    height: 200px; /* 200px bahut zyada bada tha */
-    width: 120%; 
-    margin-left: 40%;
-    
-    /* Yeh filter white logo ko yellow mein convert kar dega */
-    filter: brightness(0) saturate(100%) invert(89%) sepia(20%) saturate(1200%) hue-rotate(350deg) brightness(105%) contrast(100%);
-}
-
-.future50-box {
-    height: 55px; /* White box size */
-    width: auto;
-  padding-left: 70%;
-    margin-bottom: -50%;
-    
-}
-
-/* Yellow Box Styling */
-.yellow-rect {
-    background-color: #ecb322;
-    height: 140px;width: 70%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    margin-left: 40%;
-    margin-top: -40px;
-}
-
-.certo-main {
-    width: 70%; 
-    height: auto;
-    display: block;
-}
-
-/* Image 25: Plus Logo (Jo Certo ke upar aayega) */
-.certo-plus {
-    position: absolute; /* Parent (.yellow-rect) ke upar fix karne ke liye */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Yeh line perfectly center karti hai */
-    width: 80%; /* Size ko adjust karein jaisa image mein chahiye */
-    pointer-events: none; /* Taake niche wali image click ho sake agar zaroorat ho */
-}
-
-/* Text Styling */
-.footer-bottom {
-    margin-top: 50px;
-    text-align: left; /* Text ko left-aligned rakhne ke liye */
-}
-
-.legal-text {
-    font-size: 11px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.4);
-    max-width: 850px; /* Is se text automatic lines mein break ho jayega */
-    margin-bottom: 20px;
-}
-
-.divider {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+.policy-links {
     margin: 20px 0;
-
-     
-}
-.legal-text{
-     margin-left: -9%;
-    display: flex;
-    flex-direction: column; /* Is se items ek ke neeche ek (next line) aa jayenge */
-    gap: 8px;               /* Dono lines ke darmiyan thoda gap dene ke liye */
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: left;
-
-    
-}
-.copyright-row {
-    margin-left: -30%;
-    display: flex;
-    flex-direction: column; /* Is se items ek ke neeche ek (next line) aa jayenge */
-    gap: 8px;               /* Dono lines ke darmiyan thoda gap dene ke liye */
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: left;       /* Text ko left side par align rakhne ke liye */
 }
 
-.copyright-row a {
-    color: white;
+.policy-links a {
+    color: #fff;
+    text-decoration: underline;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.copyright-info p {
+    font-size: 12px;
+    color: #9ea0ad;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.copyright-info a {
+    color: #9ea0ad;
     text-decoration: underline;
 }
 
-.copyright-row a { color: white; text-decoration: underline; }
+/* Middle Column */
+.footer-nav-img {
+    max-width: 200px;
+}
+
+/* Right Column & Newsletter */
+.newsletter-card {
+    background-color: #ffc043; /* Yellow */
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden; /* Clips the background shield */
+    color: #02033b;
+}
+
+.newsletter-bg-shield {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    height: 120%;
+    opacity: 0.2; /* Makes it look like a watermark */
+    pointer-events: none;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-content h3 {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.newsletter-content p {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    display: flex;
+    background: #fff;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.newsletter-form input {
+    border: none;
+    padding: 10px 20px;
+    flex-grow: 1;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: #02033b;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* White Badge */
+.white-badge-container {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.white-badge-img {
+    max-width: 280px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #9ea0ad;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .footer-col {
+        text-align: center;
+    }
+    .footer-wordmark, .footer-nav-img {
+        margin: 0 auto 30px auto;
+    }
+    .white-badge-container {
+        text-align: center;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        background: transparent;
+        gap: 10px;
+    }
+    .newsletter-form input, .newsletter-form button {
+        border-radius: 50px;
+    }
+}
