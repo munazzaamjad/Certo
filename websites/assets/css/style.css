@@ -41,8 +41,8 @@ padding-top: 25px;
 padding-left: 25px; 
 } 
 .hero-bg-image { 
-width: 115%; 
-height: 115%; 
+width: 100%; 
+height: 100%; 
 object-fit: cover; 
 display: block; 
 } 
@@ -81,7 +81,7 @@ border-radius: 50px !important;
 } 
 /* --- NAVBAR SIGN IN BUTTON --- */
 
-
+/* Ensures the container moves to the right in Bootstrap navbar */
 .navbar-collapse {
     display: flex;
     align-items: center;
@@ -92,7 +92,7 @@ border-radius: 50px !important;
     height: 35px;            
     width: auto;            
     cursor: pointer;         
-    transition: transform 0.2s ease, opacity 0.2s ease; 
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition for hover effect */
     display: block;
 }
 
@@ -111,8 +111,8 @@ border-radius: 50px !important;
 }
 
 .fixed-logo {
-    height: 30px;        
-    width: auto;         
+    height: 30px;        /* Set the ideal height for your logo */
+    width: auto;         /* Maintains the original aspect ratio */
     display: block;
     transition: transform 0.3s ease; 
 }
@@ -202,7 +202,7 @@ justify-content: center;
 width: 100%; 
 max-width: 1100px; 
 height: auto; 
-
+/* Ensures logos stay properly contained without extra spacing */ 
 object-fit: contain; 
 display: block; 
 } 
@@ -304,7 +304,7 @@ max-width: 1500px;
 width: 60%; 
 height: auto; 
 display: inline-block; 
-
+/* Card ko clean rakhne ke liye */ 
 filter: drop-shadow(0 15px 40px rgba(0,0,0,0.04)); 
 } 
 /* Mobile Responsive */ 
@@ -341,7 +341,7 @@ margin-bottom: 30px;
     max-width: 700px; 
     height: auto;
     object-fit: contain;
-    
+    /* Adding subtle shadow if the image doesn't already have one */
     filter: drop-shadow(0 5px 15px rgba(0,0,0,0.03));
 }
 
