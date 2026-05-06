@@ -635,3 +635,17 @@ margin-bottom: 30px;
 .copyright-row a { color: white; text-decoration: underline; }
 
 
+/* --- YE CODE FILE KE END MEIN PASTE KAREIN --- */
+
+.img9 {
+    width: 600px !important;  /* Size yahan se bada hoga */
+    height: auto !important;
+    padding-right: 150px !important; /* Left move karne ke liye padding */
+    display: block !important;
+}
+
+.img8 {
+    width: 550px !important;  /* Larki wali image ka size */
+    height: auto !important;
+    display: block !important;
+}
