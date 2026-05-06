@@ -11,71 +11,7 @@ padding: 0;
 } 
 /* --- HERO SECTION --- */ 
  
-/* --- NEW HERO SECTION FIX --- */
-.hero-section {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    background: #fff;
-    overflow: visible; /* Taake mobile bahar nikal sakay */
-}
 
-.hero-content {
-    padding: 0 10% 0 15%;
-}
-
-/* Right Side Wrapper */
-.blue-frame-container {
-    position: relative;
-    width: 100%;
-    height: 600px; /* Aap isay height ko adjust kar sakte hain */
-    display: flex;
-    justify-content: flex-end; /* Blue box ko right side par chipkayega */
-}
-
-/* Blue "L" Shape Border */
-.blue-border-box {
-    background-color: #4335DE; 
-    width: 95%; /* 5% left se khali rahega blue dikhane ke liye */
-    height: 100%;
-    padding-top: 35px; /* Top blue border */
-    padding-left: 35px; /* Left blue border */
-    border-radius: 0 0 0 0; /* Agar curve chahiye to yahan add karein */
-}
-
-.orange-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* MOBILE OVERLAP - Ye white aur orange ke junction par ayega */
-.mobile-overlap {
-    position: absolute;
-    left: 16; /* Border line par position */
-    top: 50%;
-    transform: translate(-45%, -50%); /* 45% left side par push karega overlap ke liye */
-    width: 280px; /* Mobile ka size */
-    z-index: 99;
-}
-
-.phone-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(15px 15px 40px rgba(0,0,0,0.2));
-}
-
-/* Mobile Responsive */
-@media (max-width: 991px) {
-    .blue-frame-container { height: 400px; margin-top: 50px; }
-    .mobile-overlap {
-        left: 50%;
-        top: 0;
-        width: 180px;
-        transform: translate(-50%, -30%);
-    }
-    .hero-content { text-align: center; padding: 40px 20px; }
-}
 /* --- BUTTONS (Fixed Sizes) --- */ 
 .btn-certo-yellow { 
 background-color: var(--certo-yellow) !important; 
