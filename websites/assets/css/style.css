@@ -49,17 +49,19 @@ display: block;
 } 
 /* --- THE MOBILE PHONE (The moving part) --- */ 
 .mobile-container { 
-position: absolute; 
-top: 50%; 
-/* Isay percentage mein lock kiya hai taake ye white aur orange ke junction par rahe */ 
-left: 0; 
-transform: translate(-40%, -50%); 
-width: 35%; /* Box size fixed */ 
-max-width: 300px; 
-z-index: 20; 
-pointer-events: none; /* Mouse moves se disturb nahi hoga */ 
-margin-left: 20%; 
-} 
+    position: absolute;
+     top: 48% !important;      /* moves UP */
+    left: 11% !important;     /* moves LEFT slightly */
+    transform: translate(-50%, -50%) !important; 
+         /* was 50% → moves UP */
+ 
+    /* more left + slightly more up */
+    width: 35%; 
+    max-width: 300px; 
+    z-index: 20; 
+    pointer-events: none; 
+    margin-left: 18%;  /* was 20% → moves LEFT */
+}
 .floating-mobile { 
 width: 100%; 
 height: auto; 
