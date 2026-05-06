@@ -218,12 +218,15 @@ width: 200%; /* Makes cards feel scrollable on mobile */
                             
                                
                          /* Section 3*/ 
-.mission-section { 
-padding: 100px 0; 
-background-color: #ffffff; 
-overflow: hidden; 
-width: 1500px; ; 
-} 
+.mission-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;   /* ✅ FIXED */
+}
+.mission-text-img {
+    margin-left: -40px;  /* adjust: -20px, -60px as needed */
+}
 /* Left Content */ 
 .mission-text-wrapper { 
 padding-right: 20px; 
@@ -632,24 +635,3 @@ margin-bottom: 30px;
 .copyright-row a { color: white; text-decoration: underline; }
 
 
-/* --- IMG 8 aur IMG 9 FIX --- */
-
-/* Image 8 ka size barhane ke liye */
-.img8 {
-    width: 100% !important;
-    max-width: 650px !important; /* Is number ko barhane se image badi hogi */
-    height: auto !important;
-}
-
-/* Image 9 ka size barhane aur LEFT move karne ke liye */
-.img9 {
-    width: 100% !important;
-    max-width: 700px !important; /* Image 8 se thodi badi rakhi hai */
-    height: auto !important;
-    
-    /* LEFT shift karne ke liye padding aur margin ka istemal */
-    padding-right: 100px !important; /* Right side par space dene se image left shift hogi */
-    margin-left: -50px !important;   /* Is se image mazeed left side par khinch jaye gi */
-    
-    display: block !important;
-}
