@@ -231,7 +231,7 @@ padding-right: 20px;
 .mission-img-text { 
 width: 110% !important; /* Size barhane ke liye 100% se zyada kiya hai */
     height: auto;
-    max-width: 600px; /* Isay aap apni marzi se adjust karein */
+    max-width: 550px; /* Isay aap apni marzi se adjust karein */
     transform: scale(1.1);
 } 
 /* Right Content: Visual with Frame */ 
