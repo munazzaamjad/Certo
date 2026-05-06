@@ -52,7 +52,7 @@ padding: 0;
 /* MOBILE OVERLAP - Ye white aur orange ke junction par ayega */
 .mobile-overlap {
     position: absolute;
-    left: 5; /* Border line par position */
+    left: 16; /* Border line par position */
     top: 50%;
     transform: translate(-45%, -50%); /* 45% left side par push karega overlap ke liye */
     width: 280px; /* Mobile ka size */
