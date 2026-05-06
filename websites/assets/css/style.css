@@ -635,16 +635,3 @@ margin-bottom: 30px;
 .copyright-row a { color: white; text-decoration: underline; }
 
 
-.img9 {
-    width: 600px !important; 
-    padding-right: 150px !important; /* Is se image left side par push hogi */
-    display: block !important;
-}
-
-.img8 {
-    width: 550px !important; 
-    position: absolute; /* Taake ye img9 ke upar aa jaye */
-    top: 20px; 
-    left: 20px;
-    z-index: 5;
-}
