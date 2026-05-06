@@ -3,7 +3,7 @@
 --certo-dark-blue: #02033b; 
 --certo-yellow: #FFC043; 
 } 
-html, body {     
+html, body {     /* Base Settings to prevent shifting */ 
 overflow-x: hidden; 
 width: 100%; 
 margin: 0; 
@@ -14,18 +14,18 @@ padding: 0;
 min-height: 100vh; 
 display: flex; 
 align-items: center; 
-overflow: hidden; 
+overflow: hidden; /* Bahar nikalti hui images ko lock karne ke liye */ 
 background: #fff; 
 width: 100%;
 } 
 /* Left Content Area */ 
 .hero-content { 
-padding: 0 10% 0 15%; 
+padding: 0 10% 0 15%; /* Spacing ko lock kar diya */ 
 position: relative; 
 z-index: 5; 
 } 
 .hero-content h1 { 
-font-size: clamp(2.5rem, 5vw, 4rem); 
+font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive but controlled size */ 
 color: var(--certo-dark-blue); 
 line-height: 1.1; 
 font-weight: 800; 
@@ -50,13 +50,13 @@ display: block;
 .mobile-container { 
 position: absolute; 
 top: 50%; 
-
+/* Isay percentage mein lock kiya hai taake ye white aur orange ke junction par rahe */ 
 left: 0; 
-transform: translate(-30%, -50%); 
+transform: translate(-40%, -50%); 
 width: 35%; /* Box size fixed */ 
-max-width: 320px; 
-z-index: 5; 
-pointer-events: none; 
+max-width: 300px; 
+z-index: 20; 
+pointer-events: none; /* Mouse moves se disturb nahi hoga */ 
 margin-left: 20%; 
 } 
 .floating-mobile { 
@@ -89,37 +89,37 @@ border-radius: 50px !important;
 
 /* Specific styling for the button image */
 .fixed-btn-img {
-    height: 35px;            
-    width: auto;            
-    cursor: pointer;         
+    height: 35px;            /* Set the fixed height */
+    width: auto;             /* Keeps the image aspect ratio perfect */
+    cursor: pointer;         /* Shows hand icon on hover */
     transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition for hover effect */
     display: block;
 }
 
 /* Hover effect to make it interactive */
 .fixed-btn-img:hover {
-    transform: scale(1.05);  
-    opacity: 0.9;           
+    transform: scale(1.05);  /* Slightly grows when hovered */
+    opacity: 0.9;            /* Slightly fades for a button-click feel */
 }
 
 /* --- NAVBAR LOGO STYLING --- */
 
 .navbar-brand {
     display: flex;
-    align-items: center; 
-    padding: 0;          
+    align-items: center; /* Vertically centers the logo in the navbar */
+    padding: 0;          /* Removes default Bootstrap padding for a cleaner look */
 }
 
 .fixed-logo {
     height: 30px;        /* Set the ideal height for your logo */
     width: auto;         /* Maintains the original aspect ratio */
     display: block;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease; /* Adds a smooth feel for interactions */
 }
 
 /* Optional: Slight hover effect */
 .fixed-logo:hover {
-    transform: scale(1.02);
+    transform: scale(1.02); /* Very subtle growth on hover */
 }
 
 /* --- MOBILE RESPONSIVE (Strict Control) --- */ 
@@ -134,14 +134,14 @@ text-align: center;
 } 
 .blue-frame { 
 height: 450px; 
-padding-left: 0; 
+padding-left: 0; /* Mobile par blue border side se khatam */ 
 } 
 .fixed-btn-img {
-        height: 40px;        
-        margin-top: 15px;   
+        height: 40px;        /* Smaller size for mobile screens */
+        margin-top: 15px;    /* Adds space from menu links on mobile */
     }
      .justify-content-end {
-        justify-content: center !important; 
+        justify-content: center !important; /* Centers button on mobile menu */
     }
 .mobile-container { 
 left: 50%; 
@@ -149,17 +149,17 @@ transform: translate(-50%, -50%);
 width: 220px; 
 } 
  .fixed-logo {
-        height: 35px;    
+        height: 35px;    /* Slightly smaller logo for mobile screens */
     }
 } 
                              
                             
                        /*Section 2*/ 
 .section-yellow { 
-background-color: #FFC043; 
+background-color: #FFC043; /* Brand yellow background */ 
 padding: 60px 0; 
 width: 100%; 
-overflow: hidden; 
+overflow: hidden; /* Prevents content from overflowing outside */ 
 } 
 .sec2-container { 
 max-width: 1200px; 
@@ -173,7 +173,7 @@ align-items: center;
 .sec2-heading { 
 margin-bottom: 40px; 
 width: 100%; 
-text-align: left;
+text-align: left; /* Keeps heading aligned to the left */ 
 } 
 .sec2-heading img { 
 max-width: 500px; 
@@ -188,8 +188,8 @@ display: flex;
 justify-content: center; 
 } 
 .full-cards-img { 
-width: 127%; 
-max-width: none; 
+width: 127%; /* Slightly larger to fully cover the design */ 
+max-width: none; /* Remove width constraints */ 
 height: auto; 
 } 
 /* Logos Section Fix */ 
@@ -209,7 +209,7 @@ display: block;
 /* Mobile Responsive */ 
 @media (max-width: 768px) { 
 .full-cards-img { 
-width: 200%; 
+width: 200%; /* Makes cards feel scrollable on mobile */ 
 } 
 } 
                             
@@ -234,7 +234,7 @@ display: block;
 /* Right Content: Visual with Frame */ 
 .mission-visual { 
 position: relative; 
-padding: 30px; 
+padding: 30px; /* Space for the yellow frame to show */ 
 display: flex; 
 justify-content: center; 
 align-items: center; 
@@ -272,7 +272,7 @@ display: none;
                           /*Sectio 4*/ 
 /* --- SECTION 4: LIGHT BLUE/WHITE STYLE --- */ 
 .spyware-full-blue { 
-background-color: #f3f7ff; 
+background-color: #f3f7ff; /* Poora background light blue */ 
 padding: 100px 0; 
 width: 100%; 
 display: flex; 
@@ -281,12 +281,12 @@ justify-content: center;
 .spyware-full-blue .container { 
 display: flex; 
 flex-direction: column; 
-align-items: center; 
+align-items: center; /* Horizontally Center */ 
 text-align: center; 
 } 
 /* Heading Image (image10) */ 
 .spy-header-row { 
-margin-bottom: 60px; 
+margin-bottom: 60px; /* Image 10 aur 11 ke darmiyan gap */ 
 width: 100%; 
 } 
 .img-10-full { 
@@ -300,7 +300,7 @@ display: inline-block;
 width: 100%; 
 } 
 .img-11-full { 
-max-width: 1500px; 
+max-width: 1500px; /* Card size lock */ 
 width: 60%; 
 height: auto; 
 display: inline-block; 
@@ -321,11 +321,11 @@ margin-bottom: 30px;
 }
 
 
-
+                            /*Section 5*/
 /* --- SECTION 5: INFO CARDS --- */
 .info-cards-section {
     padding: 80px 0;
-    background-color: #ffffff; 
+    background-color: #ffffff; /* White background as per design */
     width: 100%;
 }
 
@@ -338,7 +338,7 @@ margin-bottom: 30px;
 
 .info-img {
     width: 70%;
-    max-width: 700px; 
+    max-width: 700px; /* Adjusting size to match design proportions */
     height: auto;
     object-fit: contain;
     /* Adding subtle shadow if the image doesn't already have one */
@@ -352,7 +352,7 @@ margin-bottom: 30px;
     }
     
     .info-img {
-        max-width: 100%; 
+        max-width: 100%; /* Full width on mobile */
         margin-bottom: 20px;
     }
 }
@@ -373,7 +373,7 @@ margin-bottom: 30px;
 }
 
 .img-14-cta {
-    max-width: 600px; 
+    max-width: 600px; /* Adjust based on design scale */
     width: 100%;
     height: auto;
 }
@@ -383,20 +383,20 @@ margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; 
-    flex-wrap: wrap; 
+    gap: 20px; /* Space between the two buttons */
+    flex-wrap: wrap; /* Wraps buttons on mobile */
 }
 
 /* Image 15 (iPhone Button) Styling */
 .img-15-btn {
-    height: 55px; 
+    height: 55px; /* Size to match the Android button height */
     width: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
 .img-15-btn:hover {
-    transform: translateY(-3px); 
+    transform: translateY(-3px); /* Hover lift effect */
 }
 
 /* Manual Android Button Styling to match Image 15 */
@@ -404,7 +404,7 @@ margin-bottom: 30px;
     height: 55px;
     padding: 0 30px;
     border: 2px solid white;
-    border-radius: 50px; 
+    border-radius: 50px; /* Rounded pill shape */
     color: white;
     text-decoration: none;
     display: flex;
@@ -425,22 +425,22 @@ margin-bottom: 30px;
     }
     
     .cta-buttons-wrapper {
-        flex-direction: column; 
+        flex-direction: column; /* Stack buttons vertically on mobile */
         gap: 15px;
     }
 }
 
-
+                    /*Section 7*/
 /* --- SECTION 7: STACKED CENTERED LAYOUT (ENHANCED SIZES) --- */
 .footer-stacked-center {
     background-color: #ffffff; 
-    padding: 100px 0; 
+    padding: 100px 0; /* Vertical padding thora barha diya hai */
     width: 100%;
 }
 
 /* Image 20: Top Logo (Large Size) */
 .img-20-top {
-    max-width: 500px; 
+    max-width: 500px; /* Size barha diya gaya hai */
     width: 150%;
     height: auto;
     margin-bottom: 20px;
@@ -450,14 +450,14 @@ margin-bottom: 30px;
 .middle-badges-row {
     display: flex;
     justify-content: center;
-    gap: 50px; 
+    gap: 50px; /* Icons ke darmiyan space barha di hai */
     margin-bottom: 40px;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .badge-mid {
-    height: 400px; 
+    height: 400px; /* Size 25px se barha kar 60px kar diya hai */
     width: auto;
     object-fit: contain;
    
@@ -465,7 +465,7 @@ margin-bottom: 30px;
 
 /* Image 19: Bottom Badge (Large) */
 .img-19-bottom {
-    height: 50px; 
+    height: 50px; /* Image 19 ko sabse wazeh rakha hai */
     width: auto;
     display: inline-block;
 }
@@ -481,7 +481,7 @@ margin-bottom: 30px;
     }
     
     .badge-mid {
-        height: 40px; 
+        height: 40px; /* Mobile par thora chota rakha hai */
     }
     
     .img-19-bottom {
@@ -504,7 +504,7 @@ margin-bottom: 30px;
 }
 
 .container {
-    max-width: 900px; 
+    max-width: 900px; /* Is se spacing tight ho jayegi */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -513,7 +513,7 @@ margin-bottom: 30px;
 .footer-row-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center; /* Sab ko center align rakha hai row mein */
     margin-bottom: 40px;
 }
 
@@ -534,18 +534,18 @@ margin-bottom: 30px;
     height: 30px;
 }
 
-.img-google { height: 120px;width: 100%; margin-left: -30%; } 
+.img-google { height: 120px;width: 100%; margin-left: -30%; } /* Google thoda bada hota hai */
 .img-intel { 
-    height: 200px; 
+    height: 200px; /* 200px bahut zyada bada tha */
     width: 120%; 
     margin-left: 40%;
     
-    /* filter white logo */
+    /* Yeh filter white logo ko yellow mein convert kar dega */
     filter: brightness(0) saturate(100%) invert(89%) sepia(20%) saturate(1200%) hue-rotate(350deg) brightness(105%) contrast(100%);
 }
 
 .future50-box {
-    height: 55px; 
+    height: 55px; /* White box size */
     width: auto;
   padding-left: 70%;
     margin-bottom: -50%;
@@ -571,27 +571,27 @@ margin-bottom: 30px;
     display: block;
 }
 
-
+/* Image 25: Plus Logo (Jo Certo ke upar aayega) */
 .certo-plus {
-    position: absolute; 
+    position: absolute; /* Parent (.yellow-rect) ke upar fix karne ke liye */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 80%; 
-    pointer-events: none; 
+    transform: translate(-50%, -50%); /* Yeh line perfectly center karti hai */
+    width: 80%; /* Size ko adjust karein jaisa image mein chahiye */
+    pointer-events: none; /* Taake niche wali image click ho sake agar zaroorat ho */
 }
 
 /* Text Styling */
 .footer-bottom {
     margin-top: 50px;
-    text-align: left; 
+    text-align: left; /* Text ko left-aligned rakhne ke liye */
 }
 
 .legal-text {
     font-size: 11px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.4);
-    max-width: 850px; 
+    max-width: 850px; /* Is se text automatic lines mein break ho jayega */
     margin-bottom: 20px;
 }
 
@@ -605,8 +605,8 @@ margin-bottom: 30px;
 .legal-text{
      margin-left: -9%;
     display: flex;
-    flex-direction: column; 
-    gap: 8px;               
+    flex-direction: column; /* Is se items ek ke neeche ek (next line) aa jayenge */
+    gap: 8px;               /* Dono lines ke darmiyan thoda gap dene ke liye */
     font-size: 11px;
     color: rgba(255, 255, 255, 0.6);
     text-align: left;
@@ -616,11 +616,11 @@ margin-bottom: 30px;
 .copyright-row {
     margin-left: -30%;
     display: flex;
-    flex-direction: column; 
-    gap: 8px;               
+    flex-direction: column; /* Is se items ek ke neeche ek (next line) aa jayenge */
+    gap: 8px;               /* Dono lines ke darmiyan thoda gap dene ke liye */
     font-size: 11px;
     color: rgba(255, 255, 255, 0.6);
-    text-align: left;      
+    text-align: left;       /* Text ko left side par align rakhne ke liye */
 }
 
 .copyright-row a {
@@ -629,5 +629,6 @@ margin-bottom: 30px;
 }
 
 .copyright-row a { color: white; text-decoration: underline; }
+
 
 
