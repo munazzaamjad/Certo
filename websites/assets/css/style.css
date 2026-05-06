@@ -53,7 +53,7 @@ padding: 0;
 .mobile-overlap {
     position: absolute;
     left: 5; /* Border line par position */
-    top: 50%;
+    top: 45%;
     transform: translate(-45%, -50%); /* 45% left side par push karega overlap ke liye */
     width: 280px; /* Mobile ka size */
     z-index: 99;
