@@ -38,8 +38,8 @@ width: 100%;
 height: 100vh; 
 background-color: var(--certo-blue); 
 /* Blue border effect using padding */ 
-padding-top: 25px; 
-padding-left: 25px; 
+padding-top: 5px; 
+padding-left: 10px; 
 } 
 .hero-bg-image { 
 width: 100%; 
